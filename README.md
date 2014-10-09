@@ -58,9 +58,9 @@ It should return target groups which belong to the selected country based on it'
 
 It should accept the following params:
 
-:country_code
-:target_group_id
-:locations  (an array of hashes which look like this { id: 123, panel_size: 200 })
+- :country_code
+- :target_group_id
+- :locations  (an array of hashes which look like this { id: 123, panel_size: 200 })
 
 and return a price based on a logic specific to each panel provider used by a country.
 
