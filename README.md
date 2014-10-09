@@ -1,40 +1,40 @@
 # dev test
 
-Prepare a rails application which would have:
+Prepare a rails application which would have a public and a private interface.
  
-- a private API responding to the following requests:
+Private API responding to the following requests:
   
-1.  GET  locations/:country_code
-2.  GET  target_groups/:country_code
-3.  POST evaluate_target
+* 1 - GET  locations/:country_code
+* 2 - GET  target_groups/:country_code
+* 3 - POST evaluate_target
 
-- a public interface responding to the following requests
+Public interface responding to the following requests
 
-4.  GET  locations/:country_code
-5.  GET  target_groups/:country_code
+* 4 - GET  locations/:country_code
+* 5 - GET  target_groups/:country_code
 
 
 ## models
 
 Country is linked with LocationGroup via many to many relationship and TargetGroup also via many to many but only with the root nodes:
 
-id, country_code, panel_provider_id
+- id, country_code, panel_provider_id
 
 PanelProvider
 
-id, code
+- id, code
 
 Location is linked with LocationGroup via many to many relationship:
 
-id, name, external_id, secret_code, country_id
+- id, name, external_id, secret_code, country_id
 
 LocationGroup:
 
-id, name, country_id, panel_provider_id
+- id, name, country_id, panel_provider_id
 
-TargetGroup model would have associations with it self via parent_id which ould for a tree with mutiple root nodes:
+TargetGroup model would have associations with it self via parent_id which ould for a tree with multiple root nodes:
 
-id, name, external_id, parent_id, secret_code, country_id, panel_provider_id
+- id, name, external_id, parent_id, secret_code, country_id, panel_provider_id
 
 
 The application should have:
@@ -46,15 +46,15 @@ The application should have:
 
 ## request info
 
-Request #1
+#### Request #1
 
 It should return locations which belong to the selected country based on it's current panel provider
 
-Request #2
+#### Request #2
 
 It should return target groups which belong to the selected country based on it's current panel provider
 
-Request #3
+#### Request #3
 
 It should accept the following params:
 
@@ -64,11 +64,11 @@ It should accept the following params:
 
 and return a price based on a logic specific to each panel provider used by a country.
 
-Request #4
+#### Request #4
 
 Same as #1 but for public consumption 
 
-Request #5
+#### Request #5
 
 Same as #2 but for public consumption
 
@@ -76,15 +76,15 @@ Same as #2 but for public consumption
 
 Each panel provider will have a different pricing logic
  
-Panel 1
+#### Panel 1
 
 The price should be based on how many letters "a" can you find on this site http://time.com divided by 100
     
-Panel 2
+#### Panel 2
 
 The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news
  
-Panel 3
+#### Panel 3
 
 The price should be based on how many html nodes can you find on this site http://time.com divided by 100
 
