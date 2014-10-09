@@ -1,6 +1,6 @@
 # dev test
 
-Prepare a rails application which would have a public and a private interface.
+Prepare a rails 4.1 application which would have a public and a private interface.
  
 Private API responding to the following requests:
   
@@ -32,7 +32,7 @@ LocationGroup:
 
 - id, name, country_id, panel_provider_id
 
-TargetGroup model would have associations with it self via parent_id which ould for a tree with multiple root nodes:
+TargetGroup model would have associations with it self via parent_id which would form a tree with multiple root nodes:
 
 - id, name, external_id, parent_id, secret_code, country_id, panel_provider_id
 
@@ -41,8 +41,8 @@ The application should have:
 - 3 Countries, each with different panel provider
 - 3 Panel Providers
 - 20 Locations of any type
-- 4 Location Groups 
-- 4 root Target Groups and each root should start a tree which is minimium 3 levels deep 
+- 4 Location Groups, 3 of them with different provider and 1 would belong to any of them  
+- 4 root Target Groups and each root should start a tree which is minimium 3 levels deep (3 of them with different provider and 1 would belong to any of them) 
 
 ## request info
 
