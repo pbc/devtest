@@ -82,9 +82,11 @@ The price should be based on how many letters "a" can you find on this site http
     
 Panel 2
 
-The price should be based on the number of <b> opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news
+The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news
  
 Panel 3
 
 The price should be based on how many html nodes can you find on this site http://time.com divided by 100
+
+
 
