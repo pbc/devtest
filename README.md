@@ -1,7 +1,7 @@
 # dev test
 
 Prepare a rails 4.1 application which would have a public and a private interface.
- 
+
 Private API responding to the following requests:
   
 * 1 - GET  locations/:country_code
@@ -13,6 +13,7 @@ Public interface responding to the following requests
 * 4 - GET  locations/:country_code
 * 5 - GET  target_groups/:country_code
 
+The authentication type is up to you and you should assume there is no firewall so the server would be public facing and needs to be secured properly when necessary.
 
 ## models
 
@@ -82,7 +83,9 @@ The price should be based on how many letters "a" can you find on this site http
     
 #### Panel 2
 
-The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news
+The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news 
+
+The tags will be encoded like this \u003cb\u003e if you view it as a raw JSON.
  
 #### Panel 3
 
