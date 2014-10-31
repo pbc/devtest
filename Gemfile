@@ -6,8 +6,9 @@ gem 'rails', '4.1.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem "devise"
-gem "rabl", '~> 0.9.0'
+gem 'devise'
+gem 'nokogiri'
+gem 'rabl', '~> 0.9.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,6 +36,7 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# group :development do
-#   gem 'debugger'
-# end
+group :development do
+  # gem 'debugger'
+  gem 'debugger2', :git => 'git://github.com/ko1/debugger2.git'
+end

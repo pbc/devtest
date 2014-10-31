@@ -2,3 +2,5 @@
 /.bundle
 /vendor/bundle
 .DS_Store
+/tmp
+/log

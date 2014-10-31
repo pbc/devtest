@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/ko1/debugger2.git
+  revision: 868f94f8b67e13f3cd3921be15168dcebf2e7019
+  specs:
+    debugger2 (1.0.0.beta2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +38,8 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     builder (3.2.2)
+    columnize (0.8.9)
+    debugger-linecache (1.2.0)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -49,8 +59,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     rabl (0.9.3)
@@ -104,8 +117,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  debugger2!
   devise
   jquery-rails
+  nokogiri
   rabl (~> 0.9.0)
   rails (= 4.1.1)
   sqlite3
