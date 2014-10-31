@@ -19,7 +19,7 @@ class TargetGroupsController < ApplicationController
   # POST /evaluate_target/
   def evaluate_target
     @country = Country.find_by_country_code(params[:country_code])
-    # @target_group = TargetGroup.find(params[:target_group_id])
+    @target_group = TargetGroup.find(params[:target_group_id])
 
     location_ids = params[:locations].map{ |item| item.values }.map{|item| item[0]}
     @locations = Location.where(:id => location_ids)
