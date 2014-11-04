@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104204541) do
+ActiveRecord::Schema.define(version: 20141104210222) do
 
   create_table "countries", force: true do |t|
     t.string   "country_code"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20141104204541) do
     t.integer  "panel_provider_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "location_groups_locations", id: false, force: true do |t|
+    t.integer "location_id"
+    t.integer "location_group_id"
   end
 
   create_table "locations", force: true do |t|
