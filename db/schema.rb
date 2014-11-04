@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104202611) do
+ActiveRecord::Schema.define(version: 20141104203526) do
 
   create_table "countries", force: true do |t|
     t.string   "country_code"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "panel_provider_id"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.string   "external_id"
+    t.string   "secret_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "country_id"
   end
 
   create_table "panel_providers", force: true do |t|
