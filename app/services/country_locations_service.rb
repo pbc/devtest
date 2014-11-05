@@ -5,6 +5,6 @@ class CountryLocationsService
 
   def get_locations_through_provider
     country = Country.find_by_country_code(@country_code)
-    country.panel_provider_unique_locations
+    country.panel_provider_unique_locations if country
   end
 end
