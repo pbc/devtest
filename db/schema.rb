@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 20141104214435) do
     t.integer  "panel_provider_id"
   end
 
-  create_table "countries_location_groups", id: false, force: true do |t|
-    t.integer "country_id"
-    t.integer "location_group_id"
-  end
-
   create_table "countries_target_groups", id: false, force: true do |t|
     t.integer "country_id"
     t.integer "target_group_id"
