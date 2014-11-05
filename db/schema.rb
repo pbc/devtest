@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104214435) do
+ActiveRecord::Schema.define(version: 20141105194244) do
 
   create_table "countries", force: true do |t|
     t.string   "country_code"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20141104214435) do
     t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "price_calculator", default: 0
   end
 
   create_table "target_groups", force: true do |t|
