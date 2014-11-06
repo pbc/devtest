@@ -8,6 +8,10 @@ class Country < ActiveRecord::Base
     panel_provider.locations.uniq if panel_provider
   end
 
+  def calculate_price_with_default_panel_provider
+    panel_provider.calculate_price if panel_provider
+  end
+
   private
   def check_target_group_is_root(target_group)
     unless target_group.is_root_node?
