@@ -6,7 +6,7 @@ class PanelProviderCalculatorFactory
       :html_nodes => Calculators::HtmlNodesCalculator
     }
     calculator_type = panel_provider.price_calculator
-    klass = calculator_instances[calculator_type]
+    klass = calculator_instances[calculator_type.to_sym]
     raise ArgumentError, "Invalid price calculator #{calculator_type}!" if klass.nil?
     klass.new(panel_provider)
   end
