@@ -5,9 +5,9 @@ require 'target_group_factory'
 
 ActiveRecord::Base.transaction do
   puts "Creating providers..."
-  bra_provider = PanelProvider.create(code: "BRA")
-  mex_provider = PanelProvider.create(code: "MEX")
-  uk_provider = PanelProvider.create(code: "UK")
+  bra_provider = PanelProvider.create(code: "BRA", price_calculator: :a_letters)
+  mex_provider = PanelProvider.create(code: "MEX", price_calculator: :b_openning_tags)
+  uk_provider = PanelProvider.create(code: "UK", price_calculator: :html_nodes)
 
   puts "Creating countries..."
   bra = Country.create(country_code: "Brasil", panel_provider: bra_provider)
