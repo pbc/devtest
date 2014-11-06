@@ -7,4 +7,8 @@ class PanelProvider < ActiveRecord::Base
     :b_openning_tags, 
     :html_nodes
   ]
+
+  def calculate_price
+    PanelProviderCalculatorFactory.price_calculator_for(self).calculate_price
+  end
 end

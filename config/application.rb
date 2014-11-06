@@ -9,5 +9,6 @@ Bundler.require(*Rails.groups)
 module ZappistoreDevTest
   class Application < Rails::Application
     config.autoload_paths += %W(#{Rails.root}/app/services/**)
+    config.autoload_paths += %W(#{Rails.root}/app/price_calculation/**)
   end
 end
