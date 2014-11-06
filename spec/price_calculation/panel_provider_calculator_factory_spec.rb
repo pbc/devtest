@@ -1,3 +1,4 @@
+require 'rails_helper'
 describe PanelProviderCalculatorFactory do
   describe "PanelProviderCalculatorFactory#price_calculator_for" do
     let(:panel_provider){double("PanelProvider")}
