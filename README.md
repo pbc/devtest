@@ -1,6 +1,6 @@
 # dev test
 
-Prepare a rails 4.1 application which would have a public and a private interface.
+Prepare a rails 4.2 application using Ruby 2.1 , which would have 2 isolated APIs, public and private.
 
 Private API responding to the following requests:
   
@@ -8,7 +8,7 @@ Private API responding to the following requests:
 * 2 - GET  target_groups/:country_code
 * 3 - POST evaluate_target
 
-Public interface responding to the following requests
+Public API responding to the following requests
 
 * 4 - GET  locations/:country_code
 * 5 - GET  target_groups/:country_code
