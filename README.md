@@ -17,7 +17,7 @@ The authentication type is up to you and you should assume there is no firewall 
 
 ## models
 
-Country is linked with LocationGroup via many to many relationship and TargetGroup also via many to many but only with the root nodes:
+Country is linked with LocationGroup via one to many relationship and with TargetGroup via many to many but only with the root nodes:
 
 - id, country_code, panel_provider_id
 
@@ -27,7 +27,7 @@ PanelProvider
 
 Location is linked with LocationGroup via many to many relationship:
 
-- id, name, external_id, secret_code, country_id
+- id, name, external_id, secret_code
 
 LocationGroup:
 
@@ -35,7 +35,7 @@ LocationGroup:
 
 TargetGroup model would have associations with it self via parent_id which would form a tree with multiple root nodes:
 
-- id, name, external_id, parent_id, secret_code, country_id, panel_provider_id
+- id, name, external_id, parent_id, secret_code, panel_provider_id
 
 
 The application should have:
