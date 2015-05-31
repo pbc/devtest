@@ -57,7 +57,7 @@ It should return target groups which belong to the selected country based on it'
 
 #### Request #3
 
-It should accept the following params:
+It should require all of the following params to be provided and valid:
 
 - :country_code
 - :target_group_id
