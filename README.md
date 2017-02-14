@@ -87,9 +87,9 @@ The price should be based on how many letters "a" can you find on this site http
     
 #### Panel 2
 
-The price should be based on the number of "b" opening tags you can find in this feed https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=news 
+The price should be based on how many arrays with more than 10 elements you can find in this search result
 
-The tags will be encoded like this \u003cb\u003e if you view it as a raw JSON.
+http://openlibrary.org/search.json?q=the+lord+of+the+rings
  
 #### Panel 3
 
